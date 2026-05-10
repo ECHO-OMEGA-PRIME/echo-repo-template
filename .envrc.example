@@ -1,0 +1,8 @@
+# Copy this file to .envrc (gitignored) and fill in real values.
+# `direnv` will auto-load these when you cd into the repo.
+
+# ─── Required ───
+# export EXAMPLE_API_KEY="..."
+
+# ─── Optional ───
+# export LOG_LEVEL=info

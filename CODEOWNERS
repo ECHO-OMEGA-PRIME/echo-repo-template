@@ -1,0 +1,10 @@
+# Repo ownership — used by GitHub for review routing and branch protection.
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default — every change goes to the primary owner.
+*       @<<GITHUB_HANDLE>>
+
+# Examples — uncomment + tailor when the repo grows:
+# /docs/        @<<GITHUB_HANDLE>>
+# /scripts/     @<<GITHUB_HANDLE>>
+# /.github/     @<<GITHUB_HANDLE>>
