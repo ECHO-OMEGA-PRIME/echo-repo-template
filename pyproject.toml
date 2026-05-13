@@ -1,0 +1,29 @@
+# pyproject.toml — echo-repo-template baseline (ADR-0005 / ADR-0006)
+# New repos scaffolded from this template inherit this configuration.
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "{{project_name}}"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = ""
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.echo-diagnostics]
+# ADR-0006 BP-6.10 — diag-kit integration block.
+# Every repo scaffolded from echo-repo-template must ship a /health endpoint
+# whose JSON response matches the diag-kit shape below.
+# The observer cap (echo.observe.diag_conformance) probes this on a 30-min
+# schedule and escalates via echo.escalate.send when the shape is missing.
+kit              = "echo-diag-kit"
+kit_version      = "1.0.0"
+kit_source       = "ECHO-OMEGA-PRIME/echo-sdk-py"
+health_path      = "/health"
+required_health_fields = ["ok", "checks", "ts", "duration_ms"]
+conformance_required   = true
+observer_cap           = "echo.observe.diag_conformance"
+observer_schedule      = "*/30 * * * *"
