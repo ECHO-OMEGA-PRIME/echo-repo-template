@@ -1,5 +1,21 @@
 # <<PROJECT_NAME>>
 
+> ## ✅ TESTED AND TRANSFERRED
+> This repository has been consolidated to the canonical ECHO account.
+> - **New location**: https://github.com/echoomegaprime/echo-repo-template
+> - **Destination commit**: `79b798244c8e1925c8a26767bc884459be3ed436`
+> - **Cert Forge certificate**: `cert_7c087e48288bb57e5586d12f52e2fafe4bd90e54` (`PRODUCTION_READY`)
+> - **GitHub App Suite**: manual receipt (blocked by build #29466) — see
+>   [`.echo/repo-health.md`](https://github.com/echoomegaprime/echo-repo-template/blob/main/.echo/repo-health.md)
+>   in the new repository
+> - **Transfer date**: 2026-08-11
+> - **🐛 Important**: this transfer fixed two real bugs that likely broke
+>   `init-from-template.sh` for every repo ever scaffolded from THIS legacy copy
+>   (a grep argument-ordering bug that aborted the script after the first token
+>   substitution, and a perl delimiter bug). If a repo you scaffolded from here
+>   still has literal `<<TOKEN>>` placeholders lying around, that's why —
+>   re-run `init-from-template.sh` from the new location to fix it properly.
+
 > <<ONE_LINE_DESCRIPTION>>
 
 [![CI](https://github.com/<<ORG>>/<<REPO>>/actions/workflows/ci.yml/badge.svg)](https://github.com/<<ORG>>/<<REPO>>/actions/workflows/ci.yml)
